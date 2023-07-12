@@ -2,7 +2,7 @@
 // This code only for learing purpose.There many bug or many other type of writing code easly, better syntax :) 
 
 import java.util.Scanner;
-public class nestedatm {
+public class using_nested_ifelse_ATM{
     public static void main(String[] args) {
         
         int userbalance = 2000;

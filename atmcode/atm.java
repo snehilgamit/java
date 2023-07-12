@@ -6,7 +6,7 @@
 import java.util.Scanner;
 
 
-public class atm {
+public class ATM {
     public static void main(String[] args) {
         int userbalance = 2000;
         int userpin = 1234;
