@@ -20,13 +20,13 @@ class data{
     }
     public void details(){
         System.out.println("\nYour details is printed, please check below:");
-        System.out.println("Name : "+name);                             //display user Name
-        System.out.println("Gender : "+gender);                         //display user Gender
-        System.out.println("Age : "+age);                               //display user Age
-        System.out.println("Phonenumber : "+phoneNumber);               //display user phoneNumber
-        System.out.println("Email-address : "+emailAddress);            //display user emailAddress
-        System.out.println("Address : "+address);                       //display user Address
-        System.out.println("Pincode :\n"+pincode);                       //display user pincode
+        System.out.println("Name : "+name);                                     //display user Name
+        System.out.println("Gender : "+gender);                                 //display user Gender
+        System.out.println("Age : "+age);                                       //display user Age
+        System.out.println("Phonenumber : "+phoneNumber);                       //display user phoneNumber
+        System.out.println("Email-address : "+emailAddress);                    //display user emailAddress
+        System.out.println("Address : "+address);                               //display user Address
+        System.out.println("Pincode :\n"+pincode);                              //display user pincode
     }
 }
 public class empolyee {
