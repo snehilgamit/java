@@ -1,5 +1,6 @@
 // @snehilgamit 
-// This code only for learing purpose.There are many bugs or many other type of writing code easly, better syntax :)
+// This code only for learing purpose.There are many bugs or you can write it in easly, better syntax. i am learing nothing else..... :)
+
 import java.util.Scanner;
 
 public class switchATM {
