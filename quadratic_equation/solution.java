@@ -66,8 +66,7 @@ public class solution {
                 qQ.menu();
             } else if (Discriminate == 0) {
                 System.out.println("This quadtraic Equation is real and same roots");
-                System.out.println("1st root is :" + qQ.getRoot1());
-                System.out.println("2nd root is :" + qQ.getRoot2());
+                System.out.println("root are :" + qQ.getRoot1());
                 qQ.menu();
             } else {
                 System.out.println("This quadtraic Equation is complex and diffrent");
