@@ -3,7 +3,7 @@
 // This code only for learing purpose.There are many bugs or you can write it in easly, better syntax. i am learing nothing else..... :) 
 import java.util.Scanner;
 
-public class vender {
+public class vending {
     public static void payment() {
         try {
             Thread.sleep(5000);
@@ -48,7 +48,7 @@ public class vender {
 
         Scanner input = new Scanner(System.in);
         System.out.println("\n\nWelcome in Snehil's BAR");
-        stockcheck(stock, itmes);
+        // stockcheck(stock, itmes);
         System.out.print("\nEnter to continue ");
         String in = input.nextLine();
         while (true) {
