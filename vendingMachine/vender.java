@@ -15,11 +15,25 @@ public class vender {
     }
 
     public static void invalidinput() {
-        System.out.println("\n-!! Invalid Input, Please try again !! !!-\n");
+        System.out.println("\n-!! Invalid Input, Please try again !!-\n");
+    }
+
+    public static void outofstock() {
+        System.out.println("\n !!- Out of Stock -!!");
     }
 
     public static void menu() {
         System.out.print("\n 1) confirm\n 0) exit \n->>Enter : ");
+    }
+
+    public static void stockcheck(int[] stock, String[] itmes) {
+        for (int i = 0; i < stock.length; i++) {
+            if (0 < stock[i]) {
+                System.out.println(stock[i] + " quantity -> " + itmes[i]);
+            } else {
+                System.out.println("Stock out -> " + itmes[i]);
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -34,6 +48,7 @@ public class vender {
 
         Scanner input = new Scanner(System.in);
         System.out.println("\n\nWelcome in Snehil's BAR");
+        stockcheck(stock, itmes);
         System.out.print("\nEnter to continue ");
         String in = input.nextLine();
         while (true) {
@@ -91,7 +106,7 @@ public class vender {
                             invalidinput();
                         }
                     } else {
-                        System.out.println("\n !--> Out of Stock <--!");
+                        outofstock();
                     }
 
                     break;
@@ -142,7 +157,7 @@ public class vender {
                             invalidinput();
                         }
                     } else {
-                        System.out.println("\n !--> Out of Stock <--!");
+                        outofstock();
                     }
                     break;
 
@@ -192,7 +207,7 @@ public class vender {
                             invalidinput();
                         }
                     } else {
-                        System.out.println("\n !--> Out of Stock <--!");
+                        outofstock();
                     }
                     break;
 
@@ -242,13 +257,13 @@ public class vender {
                             invalidinput();
                         }
                     } else {
-                        System.out.println("\n !--> Out of Stock <--!");
+                        outofstock();
                     }
                     break;
 
                 case 4:
                     if (stock[drinkChoice] > 0) {
-                        System.out.println("-> You have choose : " + coco_cola[drinkChoice]);
+                        System.out.println("-> You have choose : " + itmes[drinkChoice]);
                         menu();
                         int userinput4 = input.nextInt();
                         if (userinput4 == 1) {
@@ -291,7 +306,7 @@ public class vender {
                             invalidinput();
                         }
                     } else {
-                        System.out.println("\n !--> Out of Stock <--!");
+                        outofstock();
                     }
                     break;
 
