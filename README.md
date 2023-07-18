@@ -29,11 +29,6 @@ Go to the project directory
   cd java
 ```
 
-Code directory
-
-```bash
-  cd project
-```
 
 
 ## 🛠 Skills
