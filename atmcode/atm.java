@@ -156,7 +156,8 @@ public class ATM {
             } else {
                 System.exit(0);
             }
-        }
+            input.close();
+        }  
     }
 }
 
