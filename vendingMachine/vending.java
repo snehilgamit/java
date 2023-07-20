@@ -117,6 +117,7 @@ public class vending {
             cococolaread.close();
 
         } catch (Exception e) {
+            e.getStackTrace();
         }
 
         Scanner input = new Scanner(System.in);
