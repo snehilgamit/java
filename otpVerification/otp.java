@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class otp {
     public static String getEncryptedValue(String otpStr, int key) {
@@ -18,13 +20,21 @@ public class otp {
         Scanner input = new Scanner(System.in);
         String otpStore = "otpstore/otpStore.txt";
         String userMessager = "userMessager.txt";
-        int otp = 0;
+        int otp =0;
         int userinput = 0;
         String otpStr;
         String otpEncy;
         int limit = 4;
         int key = 10;
+        Timer timer =new Timer();
+        TimerTask task = new TimerTask() {
+            public void run(){
+                System.out.println("\n$ Time out, re-run the code");
+                System.exit(0);
+            }
+        };
         while (otp == userinput) {
+            
             try {
                 otp = (int) Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
                 otpStr = Integer.toString(otp);
@@ -36,11 +46,13 @@ public class otp {
                 writeOTP.close();
                 sendOTP.close();
             } catch (Exception e) {
-
             }
             for (int i = 0; i <= limit; i++) {
+                timer.schedule(task, 15000);
                 System.out.print("Enter your OTP : ");
                 userinput = input.nextInt();
+                task.cancel();
+
                 if (userinput == otp) {
                     System.out.println("-->  OTP is Correct ✅");
                     System.exit(0);
@@ -62,15 +74,26 @@ public class otp {
                             writeOTP.close();
                             sendOTP.close();
                         } catch (Exception e) {
-
                         }
                     } else if (inputoption == 2) {
-
+                        task = new TimerTask() {
+                         public void run(){
+                System.out.println("\n$ Time out, re-run the code");
+                System.exit(0);
+                         }       
+                        };
                     } else {
                         System.out.println("// Invalid Input //");
                     }
-                }
+                } 
             }
+            task = new TimerTask() {
+                public void run() {
+                    System.out.println("\n$ Time out, re-run the code");
+                    input.close();
+                    System.exit(0);
+                }
+            };
             input.close();
         }
     }
