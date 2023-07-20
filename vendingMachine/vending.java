@@ -48,10 +48,6 @@ public class vending {
             }
         }
     }
-    // public static void case0Quantity(int quantityChoice,int drinkChoice, int[]
-    // stock, int[] itmes,int userinput){
-
-    // }
 
     public static void main(String[] args) throws FileNotFoundException {
         // FILES LOCATION
