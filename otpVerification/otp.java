@@ -23,6 +23,7 @@ public class otp {
                 writeOTP.close();
                 sendOTP.close();
             } catch (Exception e) {
+                
             }
             for (int i = 0; i <= limit; i++) {
                 System.out.print("Enter your OTP : ");
@@ -38,7 +39,7 @@ public class otp {
                     int inputoption = input.nextInt();
                     if (inputoption == 1) {
                         try {
-                            otp = (int) Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
+                            otp = (int) Math.floor(Math.random() * (9999999 - 1000000 + 1) + 1000000);
                             otpStr = Integer.toString(otp);
                             FileWriter writeOTP = new FileWriter(new File(otpStore));
                             FileWriter sendOTP = new FileWriter(new File(userMessager));
