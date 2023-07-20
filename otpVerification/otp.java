@@ -4,30 +4,43 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class otp {
+    public static String getEncryptedValue(String otpStr, int key) {
+        String otpEncy = "";
+        for (int i = 0; i < otpStr.length(); i++) {
+            char ch = otpStr.charAt(i);
+            ch += key;
+            otpEncy = otpEncy + ch;
+        }
+        return otpEncy;
+    }
+
     public static void main(String[] args) throws FileNotFoundException {
         Scanner input = new Scanner(System.in);
         String otpStore = "otpstore/otpStore.txt";
         String userMessager = "userMessager.txt";
         int otp = 0;
-        int userinput=0;
+        int userinput = 0;
         String otpStr;
+        String otpEncy;
         int limit = 4;
-        while (otp==userinput) {
+        int key = 10;
+        while (otp == userinput) {
             try {
                 otp = (int) Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
                 otpStr = Integer.toString(otp);
                 FileWriter writeOTP = new FileWriter(new File(otpStore));
                 FileWriter sendOTP = new FileWriter(new File(userMessager));
-                writeOTP.write(otpStr);
+                otpEncy = getEncryptedValue(otpStr, key);
+                writeOTP.write(otpEncy);
                 sendOTP.write(otpStr);
                 writeOTP.close();
                 sendOTP.close();
             } catch (Exception e) {
-                
+
             }
             for (int i = 0; i <= limit; i++) {
                 System.out.print("Enter your OTP : ");
-                    userinput = input.nextInt();
+                userinput = input.nextInt();
                 if (userinput == otp) {
                     System.out.println("-->  OTP is Correct ✅");
                     System.exit(0);
@@ -39,15 +52,17 @@ public class otp {
                     int inputoption = input.nextInt();
                     if (inputoption == 1) {
                         try {
-                            otp = (int) Math.floor(Math.random() * (9999999 - 1000000 + 1) + 1000000);
+                            otp = (int) Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
                             otpStr = Integer.toString(otp);
                             FileWriter writeOTP = new FileWriter(new File(otpStore));
                             FileWriter sendOTP = new FileWriter(new File(userMessager));
-                            writeOTP.write(otpStr);
+                            otpEncy = getEncryptedValue(otpStr, key);
+                            writeOTP.write(otpEncy);
                             sendOTP.write(otpStr);
                             writeOTP.close();
                             sendOTP.close();
                         } catch (Exception e) {
+
                         }
                     } else if (inputoption == 2) {
 
