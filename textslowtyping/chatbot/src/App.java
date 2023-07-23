@@ -60,7 +60,7 @@ public class App {
                 break;
 
                 default:
-                System.out.print("$ Annie : ");
+                System.out.print("$ Annie : Jaldi vaha se hato )");
             }
         }
     }
