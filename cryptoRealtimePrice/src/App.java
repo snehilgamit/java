@@ -23,6 +23,7 @@ public class App {
                 reader.close();
                 connection.disconnect();
 
+                
                 String responseStr = response.toString();
                 JSONObject JSONObject = new JSONObject(responseStr);
                 String price = JSONObject.getString("price");

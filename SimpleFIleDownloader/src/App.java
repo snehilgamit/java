@@ -13,15 +13,18 @@ import javax.net.ssl.HttpsURLConnection;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
+        int txtnumber=0;
+        int mp4number=0;
+        while(true){
         System.out.println("\n🚀 Simple File Downloader 🚀\n");
         System.out.print("$ Enter Url ~ ");
         String inputurl = input.nextLine();
         if (inputurl.endsWith(".txt")) {
             if (inputurl.startsWith("https://") || inputurl.startsWith("http://") || inputurl.startsWith("Https://")
                     || inputurl.startsWith("Http://")) {
-                System.out.println("$ Correct Url");
+                System.out.println("\\u001B[36m $ Correct Url \\u001B[0m");
             } else {
-                System.out.println("Incorrect Url");
+                System.out.println("Incorrect Url \\u001B[36m");
             }
             try {
                 URL url = new URI(inputurl).toURL();
@@ -36,16 +39,18 @@ public class App {
                 reader.close();
                 connection.disconnect();
                 System.out.println(response);
-                FileWriter writer = new FileWriter(new File("lib/response.txt"));
+                String  txtpath = "lib/response("+txtnumber+").txt";
+                FileWriter writer = new FileWriter(new File(txtpath));
                 writer.write(response.toString());
                 writer.close();
+                txtnumber++;
             } catch (Exception e) {
 
             }
         } else if (inputurl.endsWith(".mp4")) {
             if (inputurl.startsWith("https://") || inputurl.startsWith("http://") || inputurl.startsWith("Https://")
                     || inputurl.startsWith("Http://")) {
-                System.out.println("$ Correct Url");
+                System.out.println("$r\u001B[36m Correct Url ");
             } else {
                 System.out.println("Incorrect Url");
             }
@@ -54,7 +59,8 @@ public class App {
                 HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
                 InputStream inputStream = connection.getInputStream();
-                    FileOutputStream outputStream = new FileOutputStream("lib/response.mp4"); 
+                String  mp4path = "lib/response("+mp4number+").mp4";
+                    FileOutputStream outputStream = new FileOutputStream(mp4path); 
                         byte[] buffer = new byte[4096];
                         int bytesRead;
                         while ((bytesRead = inputStream.read(buffer)) != -1) {
@@ -63,12 +69,12 @@ public class App {
                     
                     inputStream.close();
                     connection.disconnect();
+                    mp4number++;
                 
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            
         }
-        input.close();
+        }
     }
 }
