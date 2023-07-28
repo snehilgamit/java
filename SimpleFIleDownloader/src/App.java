@@ -38,7 +38,6 @@ public class App {
                 }
                 reader.close();
                 connection.disconnect();
-                System.out.println(response);
                 String  txtpath = "lib/response("+txtnumber+").txt";
                 FileWriter writer = new FileWriter(new File(txtpath));
                 writer.write(response.toString());

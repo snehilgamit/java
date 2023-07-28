@@ -1,0 +1,21 @@
+{
+  "trip": {
+    "pickup": "Pune",
+    "drop": "Songadh",
+    "distance": "50km"
+  },
+  "options": {
+    "volvo": {
+      "price": 800
+    },
+    "BMW": {
+      "price": 1000
+    },
+    "Range Rover": {
+      "price": 3000
+    },
+    "Lambo": {
+      "price": 50000
+    }
+  }
+}

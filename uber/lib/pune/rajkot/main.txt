@@ -1,0 +1,22 @@
+{
+  "trip": {
+    "pickup": "Pune",
+    "drop": "Rajkot",
+    "distance": "50km"
+  },
+  "options": {
+    "volvo": {
+      "price": 1800
+    },
+    "BMW": {
+      "price": 3000
+    },
+    "Range Rover": {
+      "price": 8000
+    },
+    "Lambo": {
+      "price": 10000
+    }
+  }
+}
+

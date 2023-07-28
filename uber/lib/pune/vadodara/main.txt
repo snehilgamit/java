@@ -1,0 +1,21 @@
+{
+  "trip": {
+    "pickup": "Pune",
+    "drop": "Vadodara",
+    "distance": "400km"
+  },
+  "options": {
+    "volvo": {
+      "price": 2000
+    },
+    "BMW": {
+      "price": 3000
+    },
+    "Range Rover": {
+      "price": 6000
+    },
+    "Lambo": {
+      "price": 80000
+    }
+  }
+}
