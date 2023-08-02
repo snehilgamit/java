@@ -1,6 +1,6 @@
 
 // @snehilgamit 
-// This code only for learing purpose.There are many bugs or you can write it in easly, better syntax. i am learing nothing else..... :)
+// This code only for learning purpose.There are many bugs or you can write it in easly, better syntax. i am learing nothing else..... :)
 
 import java.io.BufferedReader;
 // import java.io.File;
